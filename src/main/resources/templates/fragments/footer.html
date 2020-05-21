@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+    </head>
+    <body>
+        <!-- khai báo fragment nhớ thêm tên class cũ để nhận được css property ứng với class đó. -->
+        <div th:fragment="footer" class="footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="latter-right">
+                        <p>OUR GITHUB PROJECT</p>
+                        <ul class="face-in-to">
+                            <li><a th:href="@{https://github.com/trongtuyen99/web_nmcnpm}"><span class="facebook-in"> </span></a></li>
+                            <div class="clearfix"> </div>
+                        </ul>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-bottom-cate">
+                        <h6>CATEGORIES</h6>
+                        <ul>
+                            <li><a href="#">Category 1</a></li>
+                            <li><a href="#">Category 2</a></li>
+                            <li><a href="#">Category 3</a></li>
+                            <li><a href="#">Category 4</a></li>
+                            <li><a href="#">Category 5</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-bottom-cate bottom-grid-cat">
+                        <h6>LINKS</h6>
+                        <ul>
+                            <li><a href="#">Link 1</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                            <li><a href="#">Link 5</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-bottom-cate">
+                        <h6>FOLLOW US</h6>
+                        <ul>
+                            <li><a href="#">Contact 1</a></li>
+                            <li><a href="#">Contact 2</a></li>
+                            <li><a href="#">Contact 3</a></li>
+                            <li><a href="#">Contact 4</a></li>
+                            <li><a href="#">Contact 5</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-bottom-cate cate-bottom">
+                        <h6>OUR ADDERSS</h6>
+                        <ul>
+                            <li>Aliquam metus  dui. </li>
+                            <li>orci, ornareidquet</li>
+                            <li> ut,DUI.</li>
+                            <li >nisi, dignissim</li>
+                            <li >gravida at.</li>
+                            <li class="phone">PH : 6985792466</li>
+                            <li class="temp"> <p class="footer-class">Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p></li>
+                            <li class="temp"> <p class="footer-class">Nhóm 8 NMCNPM </p></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

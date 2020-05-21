@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--@author Phong-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+    </head>
+    <body>
+        <!-- khai báo fragment nhớ thêm tên class cũ để nhận được css property ứng với class đó. -->
+        <div th:fragment="sub-cate" class="sub-cate">
+            <div class=" top-nav rsidebar span_1_of_left">
+                <h3 class="cate">MENU</h3>
+                <ul class="menu">
+                    <ul class="kid-menu ">
+                        <li th:if="${!#request.isUserInRole('ADMIN')}"><a th:href="@{/listProductUser}">View All Products</a></li>
+                        <li th:if="${!#request.isUserInRole('ADMIN')}"><a th:href="@{/listProducer}">Search Products By Producer</a></li>
+                        <li th:if="${#request.isUserInRole('ADMIN')}"><a th:href="@{/adminControlPanel}">Admin Control Panel</a></li>
+                        <li th:if="${!#request.isUserInRole('ADMIN')}"><a th:href="@{/cart}">Cart</a></li>
+                        <li th:if="${!#request.isUserInRole('ADMIN')}"><a th:href="@{/contact}">Contact us</a></li>    
+                        <li th:if="${#request.isUserInRole('USER ') || #request.isUserInRole('ADMIN')}"><a th:href="@{/logout}">Logout</a></li>
+                    </ul>
+                </ul>
+            </div>
+<!--            <script type="text/javascript" th:inline="javascript">
+                $(function () {
+                    var menu_ul = $('.menu > li > ul'),
+                            menu_a = $('.menu > li > a');
+                    menu_ul.hide();
+                    menu_a.click(function (e) {
+                        e.preventDefault();
+                        if (!$(this).hasClass('active')) {
+                            menu_a.removeClass('active');
+                            menu_ul.filter(':visible').slideUp('normal');
+                            $(this).addClass('active').next().stop(true, true).slideDown('normal');
+                        } else {
+                            $(this).removeClass('active');
+                            $(this).next().stop(true, true).slideUp('normal');
+                        }
+                    });
+                });
+            </script>-->
+        </div>
+    </body>
+</html>
